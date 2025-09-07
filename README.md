@@ -98,16 +98,6 @@ __tests__/
   TaskTable.test.js    # Table component tests
 ```
 
-## Authors
-
-👤 Taiwo Adetona
-
-- Github: [@taiwo2](https://github.com/taiwo2)
-
-- LinkedIn: [Taiwo Adetona](https://www.linkedin.com/in/taiwo-adetona/)
-
-- Twitter: [@TaiwoAdetona4](https://twitter.com/TaiwoAdetona4/)
-
 
 ## API Reference
 
