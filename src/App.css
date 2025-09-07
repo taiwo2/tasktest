@@ -1,0 +1,363 @@
+/* Container */
+.app-container {
+  padding: 24px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 24px;
+}
+
+/* Create Task Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  max-width: 600px; /* Optional: constrain max width */
+}
+
+.task-form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap; /* prevent wrapping to keep fields side by side */
+}
+
+
+.task-form-row input,
+.task-form-row select {
+  flex: 1 1 200px; /* grow, shrink, base width 200px */
+  min-width: 350px; /* minimum width */
+  height: 36px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.task-form button {
+  padding: 6px 12px;
+  height: 36px; /* uniform height matching inputs */
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  width: 120px; /* fixed width for consistent button size */
+  align-self: flex-start; /* align button to the left */
+}
+
+
+.task-form button:hover {
+  background-color: #2980b9;
+}
+
+.task-form input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px; /* grow and shrink, min width 200px */
+}
+
+.task-form input[type="datetime-local"] {
+  max-width: 220px;
+}
+/* .task-form input,
+.task-form button,
+.task-form select,
+.task-form textarea {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  font-size: 14px;
+} */
+
+/* Task form inputs, textarea, and select */
+.task-form input,
+.task-form select,
+.task-form textarea {
+  width: 40%;
+  padding: 6px 8px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Status select specifically styled like status buttons */
+.task-form select {
+  /* color: #fff; */
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Status colors */
+.task-form select option[value="todo"] {
+  background-color: #f39c12; /* orange */
+  color: #fff;
+}
+.task-form select option[value="in_progress"] {
+  background-color: #3498db; /* blue */
+  color: #fff;
+}
+.task-form select option[value="done"] {
+  background-color: #2ecc71; /* green */
+  color: #fff;
+}
+
+/* Optional: hover effect for select */
+.task-form select:hover {
+  opacity: 0.9;
+}
+
+
+/* Load Task by Number */
+.load-task-number {
+  margin-bottom: 24px;
+}
+
+/* Selected Task Box */
+.selected-task {
+  border: 1px solid #333;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+/* Table */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  margin-bottom: 10rem;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #f5f5f5;
+}
+
+.task-table select {
+  margin-right: 8px;
+}
+
+.task-table button {
+  margin-right: 8px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.task-table button.delete-btn {
+  color: red;
+}
+
+/* Edit Section */
+.edit-area {
+  margin-top: 8px;
+}
+
+.edit-area textarea,
+.edit-area input {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.edit-area button {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.status-btn {
+  padding: 4px 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+.status-todo {
+  background-color: #f39c12; /* orange */
+}
+
+.status-in_progress {
+  background-color: #3498db; /* blue */
+}
+
+.status-done {
+  background-color: #2ecc71; /* green */
+}
+
+
+.status-btn.dimmed {
+  opacity: 0.5;
+}
+
+/* Edit area styling */
+.edit-area {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.edit-area textarea,
+.edit-area input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.edit-area button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit-area button:first-child {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.edit-area button:last-child {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+
+/* Modal overlay - fixed and covers the whole screen */
+.modal-overlay {
+  position: fixed; /* Important: overlay does not affect table flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Make sure it's on top */
+}
+
+/* Modal content container */
+.modal-content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Inputs inside modal */
+.modal-content textarea,
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Modal buttons */
+.modal-content button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.modal-content .save-btn {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.modal-content .cancel-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Load Task By Number container */
+.load-task-number {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* spacing between input and button */
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+/* Number input */
+.load-task-number input[type="number"] {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 180px;
+}
+
+/* Button */
+.load-task-number button {
+  padding: 10px 18px;
+  background-color: #2ecc71; /* green button */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.load-task-number button:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .load-task-number {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .load-task-number input,
+  .load-task-number button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .task-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .task-form input,
+  .task-form button {
+    flex: 1 1 100%;
+  }
+}
