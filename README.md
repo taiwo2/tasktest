@@ -2,7 +2,8 @@
 # Firebase Tasks App
 
 This project is a full-stack web application for creating, viewing, editing, and deleting tasks using **React** on the frontend and **Firebase Firestore** as the backend.. The app lets users create, view, update, and delete tasks with due dates and status tracking.  It demonstrates clean API design, robust validation, and scalable front-end architecture.
-
+## Preview
+* ![Home](/demo.png)
 ## Features
 
 - Add new tasks with title, description, due date, and status (`todo`, `in_progress`, `done`)
